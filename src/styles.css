@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('reset.css');
-@import url('layout.css');
-@import url('typography.css');
-@import url('responsive.css');
+@import url('../styles/reset.css');
+@import url('../styles/layout.css');
+@import url('../styles/typography.css');
+@import url('../styles/responsive.css');
 
 body {
-    max-width: 1366px;
-    margin: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     position: relative;
     min-height: 100vh;
     font-optical-sizing: auto;
@@ -14,7 +15,8 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 96%;
+    max-width: 1680px;
     margin: auto;
     padding-bottom: 4.5em;
     display: flex;
@@ -43,7 +45,8 @@ button:hover {
 /* header  */
 
 header {
-    background: #234465
+    background: #234465;
+    width: 100%;
 }
 
 header ul {
@@ -51,7 +54,7 @@ header ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75%;
+    width: 100%;
     margin: auto;
 }
 
@@ -110,7 +113,8 @@ header a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 96%;
+    max-width: 1680px;
     margin: auto;
 }
 
@@ -286,4 +290,36 @@ footer {
     color: white;
     text-shadow: 1px 1px black;
     text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .mini-navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    .mini-navbar ul li {
+        width: 220px;
+        max-width: 92vw;
+        margin: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        width: 220px;
+        max-width: 92vw;
+        margin: 0;
+    }
 }
