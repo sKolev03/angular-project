@@ -338,7 +338,6 @@ footer {
     color: white;
     text-shadow: 1px 1px black;
     text-align: center;
-    margin-top: 3em; /*remove later*/
 }
 
 @media (max-width: 1000px) {
