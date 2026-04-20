@@ -47,6 +47,11 @@ button:hover {
 header {
     background: #234465;
     width: 100%;
+    padding-bottom: 0.75rem;
+}
+
+nav {
+    padding-top: 0.15rem;
 }
 
 header ul {
@@ -54,6 +59,7 @@ header ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     width: 100%;
     margin: auto;
 }
@@ -67,22 +73,38 @@ header ul span {
 
 header li {
     list-style: none;
-    margin: .35em;
-    padding: 0 .95em;
-    background-color: #ff9f00;
-    width: 15vw;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #ffb52d 0%, #f39b09 100%);
+    min-width: clamp(140px, 12vw, 210px);
+    width: auto;
     text-align: center;
-    border-radius: 20px;
-    text-shadow: 1px 1px rgb(87, 86, 86);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(10, 23, 39, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 header li:hover {
-    scale: 1.1;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(10, 23, 39, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    filter: brightness(1.05);
+}
+
+header li:focus-within {
+    outline: 3px solid rgba(255, 214, 102, 0.95);
+    outline-offset: 3px;
 }
 
 header a {
+    display: block;
+    padding: 0.58rem 1.15rem;
     text-decoration: none;
     color: white;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-shadow: none;
     cursor: pointer;
 }
 
@@ -121,22 +143,48 @@ header a {
 /* mini-navbar */
 
 .mini-navbar ul {
-    margin-bottom: 60px;
-    margin-right: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
 }
 
 .mini-navbar ul li {
-    background-color: #ff9f00;
-    width: 15vw;
+    list-style: none;
+    background: linear-gradient(180deg, #ffb52d 0%, #f39b09 100%);
+    min-width: clamp(160px, 14vw, 220px);
+    width: auto;
     text-align: center;
-    padding: 5px;
-    border-radius: 20px;
-    text-shadow: 1px 1px rgb(95, 94, 94);
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(10, 23, 39, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .mini-navbar ul li:hover {
-    scale: 1.1;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(10, 23, 39, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    filter: brightness(1.05);
+}
 
+.mini-navbar ul li:focus-within {
+    outline: 3px solid rgba(255, 214, 102, 0.95);
+    outline-offset: 3px;
+}
+
+.mini-navbar ul li a {
+    display: block;
+    padding: 0.7rem 1.4rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    text-shadow: none;
 }
 
 /* main  */

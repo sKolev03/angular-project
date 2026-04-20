@@ -5,6 +5,8 @@
             <p class="logo"> SoftUni Forum</p>
         </div>
         <div class="mini-navbar">
+
+            @if (!isLoggedIn) {
             <ul>
                 <li>
                     <a href="#">Login</a>
@@ -13,6 +15,7 @@
                     <a href="#">Register</a>
                 </li>
             </ul>
+            }
         </div>
     </div>
     <nav>
