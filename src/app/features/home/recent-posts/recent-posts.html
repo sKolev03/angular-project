@@ -5,7 +5,7 @@
         </h2>
         <div>
             @for (post of posts; track post._id) {
-                <h1>hello</h1>
+                <app-post-item [post]="post"></app-post-item>
             }
         </div>
     </div>

@@ -1,7 +1,7 @@
 export interface Post {
     _id: string,
     text: string,
-    userID: {
+    userId: {
         username: string;
     },
     themeId: {

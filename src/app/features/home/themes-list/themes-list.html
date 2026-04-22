@@ -1,9 +1,7 @@
 <main>
     <div class="theme-title">
-        <p>Count: {{ themes.length }}</p>
-
         @for (theme of themes; track theme._id) {
-            <p>hello</p>
+            <app-theme-item [theme]="theme"></app-theme-item>
         }
     </div>
 </main>

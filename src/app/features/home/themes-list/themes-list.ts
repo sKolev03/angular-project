@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from '../../../core/services/api';
 import { Theme } from '../../../shared/interfaces/themes';
+import { ThemeItem } from '../../../shared/components/theme-item/theme-item';
 
 @Component({
   selector: 'app-themes-list',
-  imports: [],
+  imports: [ThemeItem],
   templateUrl: './themes-list.html',
   styleUrl: './themes-list.css',
 })

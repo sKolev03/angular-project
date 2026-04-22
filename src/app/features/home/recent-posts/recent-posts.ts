@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Api } from '../../../core/services/api';
 import { Post } from '../../../shared/interfaces/posts';
+import { PostItem } from '../../../shared/components/post-item/post-item';
 
 @Component({
   selector: 'app-recent-posts',
-  imports: [],
+  imports: [PostItem],
   templateUrl: './recent-posts.html',
   styleUrl: './recent-posts.css',
 })
