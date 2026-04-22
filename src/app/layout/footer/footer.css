@@ -1,0 +1,42 @@
+:host {
+	display: block;
+}
+
+:host footer {
+	position: relative;
+	width: 100%;
+	margin-top: 0;
+	min-height: 92px;
+	padding: 1.25rem 0.9rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:
+		radial-gradient(920px 240px at 5% 120%, rgba(255, 200, 122, 0.23) 0%, transparent 58%),
+		radial-gradient(880px 240px at 100% 140%, rgba(116, 185, 255, 0.2) 0%, transparent 54%),
+		linear-gradient(120deg, #16375b 0%, #214c79 46%, #1f446b 100%);
+	border-top: 0;
+	box-shadow: none;
+	color: #f5f9ff;
+	text-align: center;
+}
+
+:host footer p {
+	margin: 0;
+	max-width: min(1080px, 94vw);
+	font-size: 0.92rem;
+	line-height: 1.45;
+	letter-spacing: 0.01em;
+	text-shadow: 0 1px 3px rgba(7, 17, 31, 0.35);
+}
+
+@media (max-width: 700px) {
+	:host footer {
+		min-height: 84px;
+		padding: 1rem 0.75rem;
+	}
+
+	:host footer p {
+		font-size: 0.85rem;
+	}
+}
