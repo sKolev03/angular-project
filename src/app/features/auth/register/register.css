@@ -1,3 +1,20 @@
+:host {
+	display: block;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	isolation: isolate;
+	padding: 1.2rem 0 2.4rem;
+}
+
+:host::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(180deg, #79b6dc 0%, #9cc8e6 24%, #c6dff0 52%, #edf5fb 78%, #f7f7f7 100%);
+}
+
 /* login register forms */
 
 form.login, form.register {

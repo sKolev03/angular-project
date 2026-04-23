@@ -1,0 +1,32 @@
+:host {
+	display: block;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	isolation: isolate;
+	padding: 1.2rem 0 2.4rem;
+}
+
+:host::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(180deg, #79b6dc 0%, #9cc8e6 24%, #c6dff0 52%, #edf5fb 78%, #f7f7f7 100%);
+}
+
+:host .container {
+	width: min(1140px, 94vw);
+	margin: 1.6rem auto 2.6rem;
+	display: grid;
+	grid-template-columns: 1.7fr 1fr;
+	gap: 1.4rem;
+	align-items: start;
+}
+
+@media (max-width: 980px) {
+	:host .container {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+}
