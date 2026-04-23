@@ -5,15 +5,15 @@ import { User } from '../../shared/interfaces/user';
 @Injectable({
   providedIn: 'root',
 })
-export class Auth {
+export class AuthService {
   private userService = inject(UserService);
   private user = signal<User | null>(null);
 
   isLoggedIn = computed(() => this.user() !== null);
   currentUser = computed(() => this.user());
 
-  login(email: string, passsword: string): boolean {
-    const isUser = this.userService.validateCredentials(email, passsword);
+  login(email: string, password: string): boolean {
+    const isUser = this.userService.validateCredentials(email, password);
 
     if (!isUser) {
       return false;
