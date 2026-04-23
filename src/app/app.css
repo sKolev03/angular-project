@@ -1,0 +1,11 @@
+:host {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-content {
+	flex: 1 0 auto;
+	display: block;
+	background: linear-gradient(180deg, #79b6dc 0%, #9cc8e6 24%, #c6dff0 52%, #edf5fb 78%, #f7f7f7 100%);
+}
