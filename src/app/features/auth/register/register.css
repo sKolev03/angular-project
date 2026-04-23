@@ -4,7 +4,7 @@
 	min-height: 100vh;
 	position: relative;
 	isolation: isolate;
-	padding: 1.2rem 0 2.4rem;
+	padding: 2rem 0 3rem;
 }
 
 :host::before {
@@ -15,113 +15,174 @@
 	background: linear-gradient(180deg, #79b6dc 0%, #9cc8e6 24%, #c6dff0 52%, #edf5fb 78%, #f7f7f7 100%);
 }
 
-/* login register forms */
+/* ── Card wrapper ── */
 
-form.login, form.register {
-    width: 40%;
-    margin: 2em auto 0;
-    text-align: center;
-    background-color: #e4e3e3; 
-    border-radius: 1em;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1rem;
 }
 
-.login fieldset, .register fieldset {
-    border-radius: 0.5em;
-    padding: 1em;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+form.register {
+	width: 100%;
+	max-width: 480px;
+	background: rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 1.25rem;
+	padding: 0.5rem;
+	box-shadow: 0 8px 32px rgba(35, 68, 101, 0.18);
 }
 
-.login h2, .register h2 {
-    padding-top: 0;
-    border-bottom: none;
-    color: #234465;
-    font-size: 1.8em;
+.register fieldset {
+	border: none;
+	border-radius: 1rem;
+	padding: 2rem 2.2rem 1.6rem;
+	background: transparent;
 }
 
-.login p, .register p {
-    padding-bottom: 0;
-    padding-top: 1.5rem;
-    color: #333;
+/* ── Heading ── */
+
+.register h2 {
+	margin: 0 0 1.6rem;
+	text-align: center;
+	color: #1a3a56;
+	font-size: 1.75rem;
+	font-weight: 700;
+	letter-spacing: -0.3px;
 }
 
-.login input, .register input {
-    flex: 0 1 100%;
-    border: 1px solid #999;
-    padding: 0.4em;
-    border-left: 0.4em solid green;
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    font-size: 1em;
+/* ── Field rows ── */
+
+.register p {
+	padding: 0;
+	margin: 0 0 1rem;
+	color: #333;
 }
 
-.login select, .register select {
-    border-color: #333;
-    padding: 0.3em;
-    border-radius: 0.3em;
+.register .field {
+	display: flex;
+	align-items: stretch;
+	margin: 0 0 1rem;
+	padding: 0;
 }
 
-.login button, .register button {
-    background-color: #234465;
-    color: white;
-    border: none;
-    border-radius: 0.5em;
-    padding: 0.7em 1.5em;
-    margin-top: 1.5rem;
-    width: 60%;
-    outline: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; 
+/* icon badge */
+.register .field label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.6rem;
+	background: #e8f0f8;
+	border: 1px solid #c5d8ec;
+	border-right: none;
+	border-radius: 0.6rem 0 0 0.6rem;
+	color: #234465;
+	flex-shrink: 0;
 }
 
-.login button:hover, .register button:hover {
-    transform: scale(1.05); 
+.register .field label i {
+	border: none;
+	padding: 0;
+	background: transparent;
+	border-radius: 0;
+	font-size: 0.85rem;
 }
 
-.login i, .register i {
-    border: 1px solid #999;
-    border-right: none;
-    padding: 0.55em;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    background-color: #e9ecef;
+/* inputs */
+.register input {
+	flex: 1;
+	border: 1px solid #c5d8ec;
+	border-radius: 0 0.6rem 0.6rem 0;
+	padding: 0.6rem 0.75rem;
+	font-size: 0.95rem;
+	color: #1a3a56;
+	background: #fff;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	outline: none;
+	margin-left: 0;
 }
 
-.login a, .register a {
-    color: #234465; 
-    text-decoration: none;
+.register input:focus {
+	border-color: #3d7ab5;
+	box-shadow: 0 0 0 3px rgba(61, 122, 181, 0.15);
 }
 
-.login a:hover, .register a:hover {
-    cursor: pointer;
-    text-decoration: underline;
+/* phone row: select + input share the right side */
+.register select.tel {
+	border: 1px solid #c5d8ec;
+	border-left: none;
+	border-right: none;
+	padding: 0.6rem 0.4rem;
+	font-size: 0.9rem;
+	background: #f4f8fc;
+	color: #234465;
+	outline: none;
+	cursor: pointer;
 }
 
-.register .tel {
-    padding-right: 0.8em;
-}
-
-.login .field, .register .field {
-    display: flex;
-    padding-bottom: 0.5em;
-    align-items: center;
-}
-
-.login .field input, .register .field input {
-    margin-left: 0.5em;
+/* error state */
+.input-error {
+	border-color: #e05252;
+	box-shadow: 0 0 0 3px rgba(224, 82, 82, 0.12);
 }
 
 p.error {
-    text-align: left;
-    border-radius: 0.5em;
-    color: red;
-    padding-top: 0;
-    font-weight: bold;
+	margin: -0.6rem 0 0.8rem;
+	padding: 0;
+	font-size: 0.82rem;
+	color: #c0392b;
+	font-weight: 600;
+	text-align: left;
 }
 
-.input-error {
-    border-left-color: red;
-    border-color: red;
+/* ── Submit button ── */
+
+.register button[type="submit"] {
+	display: block;
+	width: 100%;
+	margin-top: 1.4rem;
+	padding: 0.75rem;
+	background: linear-gradient(135deg, #234465 0%, #3d7ab5 100%);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	border: none;
+	border-radius: 0.7rem;
+	cursor: pointer;
+	box-shadow: 0 4px 14px rgba(35, 68, 101, 0.3);
+	transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.register button[type="submit"]:hover {
+	opacity: 0.92;
+	transform: translateY(-1px);
+	box-shadow: 0 6px 18px rgba(35, 68, 101, 0.35);
+}
+
+.register button[type="submit"]:active {
+	transform: translateY(0);
+	box-shadow: 0 3px 8px rgba(35, 68, 101, 0.25);
+}
+
+/* ── Footer link ── */
+
+.text-center {
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	color: #555;
+}
+
+.register a {
+	color: #234465;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.register a:hover {
+	text-decoration: underline;
 }
